@@ -29,7 +29,6 @@ The scripts assume the repository is checked out as a sibling directory in the f
 ```text
 parent/
 ├── STRIDE_repo/                    # clone of the original repository
-└── STRIDE_Reviewer_Revision/       # this reproducibility package
 ```
 
 If your clone path differs, update the `REPO` variable at the top of each script.
