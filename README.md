@@ -1,11 +1,4 @@
-# STRIDE Revision — Reproducibility Package
 
-Manuscript: sports-4635610 (Sports, MDPI)  
-Round-1 revision re-validation experiments.
-
-This package reproduces the new numerical results added to the manuscript during revision (experiments E1–E10). It does not re-run the original pose-estimation or LSTM training pipelines, because the raw videos and trained model artifacts are not redistributed here.
-
----
 
 ## 1. Contents
 
