@@ -1,0 +1,482 @@
+{
+  "E1": {
+    "static_bias": 10.519975776732883,
+    "static_sd": 8.192640844355408,
+    "static_loa": [
+      -5.537600278203717,
+      26.57755183166948
+    ],
+    "sd_peak2peak": 6.116632653061225,
+    "extra_var": 29.706168992105688,
+    "nf_table": [
+      {
+        "biomarker": "#1 contact_flexion",
+        "var_total": 104.9867,
+        "share_static": 0.9,
+        "var_proj": 94.488,
+        "sigma_proj": 9.7205,
+        "NF_1.96sigma": 19.0522
+      },
+      {
+        "biomarker": "#2 peak_landing_flexion",
+        "var_total": 37.4132,
+        "share_static": 1.0,
+        "var_proj": 37.4132,
+        "sigma_proj": 6.1166,
+        "NF_1.96sigma": 11.9886
+      },
+      {
+        "biomarker": "#3 landing_rom",
+        "var_total": 150.8291,
+        "share_static": 0.9262,
+        "var_proj": 139.7047,
+        "sigma_proj": 11.8197,
+        "NF_1.96sigma": 23.1666
+      },
+      {
+        "biomarker": "#6 loading_rate",
+        "var_total": 4346.2536,
+        "share_static": 0.1,
+        "var_proj": 434.6254,
+        "sigma_proj": 20.8477,
+        "NF_1.96sigma": 40.8614
+      }
+    ]
+  },
+  "E2": {
+    "squat": {
+      "d_peak": {
+        "median": 0.0,
+        "p95": 0.2222899999999976,
+        "max": 0.5682999999999936
+      },
+      "d_rom": {
+        "median": 0.09219999999999118,
+        "p95": 0.8274299999999822,
+        "max": 2.2031000000000063
+      },
+      "d_peakvel": {
+        "median": 8.514749999999793,
+        "p95": 22.341787499999842,
+        "max": 34.89899999999977
+      },
+      "d_meanvel": {
+        "median": 1.4210854715202004e-14,
+        "p95": 2.8284733172092587,
+        "max": 4.711905982905989
+      }
+    },
+    "lunge": {
+      "d_peak": {
+        "median": 0.026000000000003354,
+        "p95": 0.325800000000001,
+        "max": 1.2043999999999997
+      },
+      "d_rom": {
+        "median": 0.11309999999998865,
+        "p95": 0.8294999999999675,
+        "max": 6.210933333333344
+      },
+      "d_peakvel": {
+        "median": 5.812500000000256,
+        "p95": 30.459000000000117,
+        "max": 39.32700000000011
+      },
+      "d_meanvel": {
+        "median": 0.3488638655462175,
+        "p95": 2.317094594594593,
+        "max": 10.599635204081633
+      }
+    },
+    "turnaround_vel": {
+      "squat": {
+        "turn_med": 8.076000000000043,
+        "turn_p95": 21.124499999999937
+      },
+      "lunge": {
+        "turn_med": 7.44000000000014,
+        "turn_p95": 36.0390000000001
+      }
+    }
+  },
+  "E3": [
+    {
+      "exercise": "squat",
+      "metric": "peak_flexion_deg",
+      "n_null": 54,
+      "emp_SD_D": 13.073,
+      "emp_q95_D": 29.622,
+      "sigma_meas": 6.117,
+      "var_within_video": 54.904,
+      "var_bio": 17.491,
+      "NF_operating": 11.9885,
+      "NF_prop_meas_only": 14.683,
+      "NF_prop_with_bio": 17.787,
+      "FPR_op": 0.3704,
+      "sens_op": 0.8077,
+      "bal_op": 0.589,
+      "FPR_p1": 0.2593,
+      "sens_p1": 0.6538,
+      "bal_p1": 0.4566,
+      "FPR_p2": 0.2407,
+      "sens_p2": 0.6154,
+      "bal_p2": 0.4281,
+      "FPR_emp": 0.0556,
+      "sens_emp": 0.3462,
+      "bal_emp": 0.2009
+    },
+    {
+      "exercise": "squat",
+      "metric": "rom_deg",
+      "n_null": 54,
+      "emp_SD_D": 20.485,
+      "emp_q95_D": 50.759,
+      "sigma_meas": 12.281,
+      "var_within_video": 68.306,
+      "var_bio": 0.0,
+      "NF_operating": 23.1666,
+      "NF_prop_meas_only": 29.481,
+      "NF_prop_with_bio": 29.481,
+      "FPR_op": 0.1852,
+      "sens_op": 0.5769,
+      "bal_op": 0.3811,
+      "FPR_p1": 0.1852,
+      "sens_p1": 0.5,
+      "bal_p1": 0.3426,
+      "FPR_p2": 0.1852,
+      "sens_p2": 0.5,
+      "bal_p2": 0.3426,
+      "FPR_emp": 0.0556,
+      "sens_emp": 0.1154,
+      "bal_emp": 0.0855
+    },
+    {
+      "exercise": "squat",
+      "metric": "mean_descent_velocity_deg_per_frame",
+      "n_null": 54,
+      "emp_SD_D": 21.785,
+      "emp_q95_D": 61.592,
+      "sigma_meas": 20.848,
+      "var_within_video": 105.778,
+      "var_bio": 0.0,
+      "NF_operating": 40.8615,
+      "NF_prop_meas_only": 50.045,
+      "NF_prop_with_bio": 50.045,
+      "FPR_op": 0.1111,
+      "sens_op": 0.2308,
+      "bal_op": 0.1709,
+      "FPR_p1": 0.1111,
+      "sens_p1": 0.1154,
+      "bal_p1": 0.1132,
+      "FPR_p2": 0.1111,
+      "sens_p2": 0.1154,
+      "bal_p2": 0.1132,
+      "FPR_emp": 0.0556,
+      "sens_emp": 0.0,
+      "bal_emp": 0.0278
+    },
+    {
+      "exercise": "lunge",
+      "metric": "peak_flexion_deg",
+      "n_null": 15,
+      "emp_SD_D": 7.617,
+      "emp_q95_D": 12.632,
+      "sigma_meas": 6.117,
+      "var_within_video": 20.338,
+      "var_bio": 0.0,
+      "NF_operating": 11.9885,
+      "NF_prop_meas_only": 14.683,
+      "NF_prop_with_bio": 14.683,
+      "FPR_op": 0.1333,
+      "sens_op": 0.9565,
+      "bal_op": 0.5449,
+      "FPR_p1": 0.0,
+      "sens_p1": 0.9565,
+      "bal_p1": 0.4783,
+      "FPR_p2": 0.0,
+      "sens_p2": 0.9565,
+      "bal_p2": 0.4783,
+      "FPR_emp": 0.0667,
+      "sens_emp": 0.9565,
+      "bal_emp": 0.5116
+    },
+    {
+      "exercise": "lunge",
+      "metric": "rom_deg",
+      "n_null": 15,
+      "emp_SD_D": 16.381,
+      "emp_q95_D": 26.579,
+      "sigma_meas": 12.281,
+      "var_within_video": 81.875,
+      "var_bio": 0.0,
+      "NF_operating": 23.1666,
+      "NF_prop_meas_only": 29.481,
+      "NF_prop_with_bio": 29.481,
+      "FPR_op": 0.0667,
+      "sens_op": 0.8261,
+      "bal_op": 0.4464,
+      "FPR_p1": 0.0667,
+      "sens_p1": 0.7391,
+      "bal_p1": 0.4029,
+      "FPR_p2": 0.0667,
+      "sens_p2": 0.7391,
+      "bal_p2": 0.4029,
+      "FPR_emp": 0.0667,
+      "sens_emp": 0.8261,
+      "bal_emp": 0.4464
+    },
+    {
+      "exercise": "lunge",
+      "metric": "mean_descent_velocity_deg_per_frame",
+      "n_null": 15,
+      "emp_SD_D": 8.788,
+      "emp_q95_D": 10.498,
+      "sigma_meas": 20.848,
+      "var_within_video": 40.678,
+      "var_bio": 0.0,
+      "NF_operating": 40.8615,
+      "NF_prop_meas_only": 50.045,
+      "NF_prop_with_bio": 50.045,
+      "FPR_op": 0.0,
+      "sens_op": 0.3913,
+      "bal_op": 0.1957,
+      "FPR_p1": 0.0,
+      "sens_p1": 0.2174,
+      "bal_p1": 0.1087,
+      "FPR_p2": 0.0,
+      "sens_p2": 0.2174,
+      "bal_p2": 0.1087,
+      "FPR_emp": 0.0667,
+      "sens_emp": 0.6957,
+      "bal_emp": 0.3812
+    }
+  ],
+  "E4": [
+    {
+      "rule": "supervised|peak_flexion_deg",
+      "n": 80,
+      "FPR_correct": 0.3704,
+      "flag_rate_incorrect": 0.8077,
+      "balanced": 0.589,
+      "n_correct": 54,
+      "n_incorrect": 26,
+      "exercise": "squat"
+    },
+    {
+      "rule": "supervised|rom_deg",
+      "n": 80,
+      "FPR_correct": 0.1852,
+      "flag_rate_incorrect": 0.5769,
+      "balanced": 0.3811,
+      "n_correct": 54,
+      "n_incorrect": 26,
+      "exercise": "squat"
+    },
+    {
+      "rule": "supervised|mean_descent_velocity_deg_per_frame",
+      "n": 80,
+      "FPR_correct": 0.1111,
+      "flag_rate_incorrect": 0.2308,
+      "balanced": 0.1709,
+      "n_correct": 54,
+      "n_incorrect": 26,
+      "exercise": "squat"
+    },
+    {
+      "rule": "supervised|OR-3-rules",
+      "n": 80,
+      "FPR_correct": 0.3704,
+      "flag_rate_incorrect": 0.8462,
+      "balanced": 0.6083,
+      "n_correct": 54,
+      "n_incorrect": 26,
+      "exercise": "squat"
+    },
+    {
+      "rule": "label-free|peak_flexion_deg",
+      "n": 80,
+      "FPR_correct": 0.3704,
+      "flag_rate_incorrect": 0.8077,
+      "balanced": 0.589,
+      "n_correct": 54,
+      "n_incorrect": 26,
+      "exercise": "squat"
+    },
+    {
+      "rule": "label-free|rom_deg",
+      "n": 80,
+      "FPR_correct": 0.1852,
+      "flag_rate_incorrect": 0.5769,
+      "balanced": 0.3811,
+      "n_correct": 54,
+      "n_incorrect": 26,
+      "exercise": "squat"
+    },
+    {
+      "rule": "label-free|mean_descent_velocity_deg_per_frame",
+      "n": 80,
+      "FPR_correct": 0.1111,
+      "flag_rate_incorrect": 0.2308,
+      "balanced": 0.1709,
+      "n_correct": 54,
+      "n_incorrect": 26,
+      "exercise": "squat"
+    },
+    {
+      "rule": "label-free|OR-3-rules",
+      "n": 80,
+      "FPR_correct": 0.3704,
+      "flag_rate_incorrect": 0.8462,
+      "balanced": 0.6083,
+      "n_correct": 54,
+      "n_incorrect": 26,
+      "exercise": "squat"
+    },
+    {
+      "rule": "supervised|peak_flexion_deg",
+      "n": 38,
+      "FPR_correct": 0.1333,
+      "flag_rate_incorrect": 0.9565,
+      "balanced": 0.5449,
+      "n_correct": 15,
+      "n_incorrect": 23,
+      "exercise": "lunge"
+    },
+    {
+      "rule": "supervised|rom_deg",
+      "n": 38,
+      "FPR_correct": 0.0667,
+      "flag_rate_incorrect": 0.8261,
+      "balanced": 0.4464,
+      "n_correct": 15,
+      "n_incorrect": 23,
+      "exercise": "lunge"
+    },
+    {
+      "rule": "supervised|mean_descent_velocity_deg_per_frame",
+      "n": 38,
+      "FPR_correct": 0.0,
+      "flag_rate_incorrect": 0.3913,
+      "balanced": 0.1957,
+      "n_correct": 15,
+      "n_incorrect": 23,
+      "exercise": "lunge"
+    },
+    {
+      "rule": "supervised|OR-3-rules",
+      "n": 38,
+      "FPR_correct": 0.1333,
+      "flag_rate_incorrect": 0.9565,
+      "balanced": 0.5449,
+      "n_correct": 15,
+      "n_incorrect": 23,
+      "exercise": "lunge"
+    },
+    {
+      "rule": "label-free|peak_flexion_deg",
+      "n": 48,
+      "FPR_correct": 0.0,
+      "flag_rate_incorrect": 0.9375,
+      "balanced": 0.4688,
+      "n_correct": 16,
+      "n_incorrect": 32,
+      "exercise": "lunge"
+    },
+    {
+      "rule": "label-free|rom_deg",
+      "n": 48,
+      "FPR_correct": 0.0,
+      "flag_rate_incorrect": 0.7812,
+      "balanced": 0.3906,
+      "n_correct": 16,
+      "n_incorrect": 32,
+      "exercise": "lunge"
+    },
+    {
+      "rule": "label-free|mean_descent_velocity_deg_per_frame",
+      "n": 48,
+      "FPR_correct": 0.0,
+      "flag_rate_incorrect": 0.25,
+      "balanced": 0.125,
+      "n_correct": 16,
+      "n_incorrect": 32,
+      "exercise": "lunge"
+    },
+    {
+      "rule": "label-free|OR-3-rules",
+      "n": 48,
+      "FPR_correct": 0.0,
+      "flag_rate_incorrect": 0.9688,
+      "balanced": 0.4844,
+      "n_correct": 16,
+      "n_incorrect": 32,
+      "exercise": "lunge"
+    }
+  ],
+  "E5": [
+    {
+      "exercise": "squat",
+      "point": 0.8136,
+      "ciA_low": 0.668010752688172,
+      "ciA_high": 0.9175055379746835,
+      "ciB_low": 0.6589800934880722,
+      "ciB_high": 0.9148451730418943
+    },
+    {
+      "exercise": "lunge",
+      "point": 0.815,
+      "ciA_low": 0.6872340425531915,
+      "ciA_high": 0.9199999999999999,
+      "ciB_low": 0.6004784688995215,
+      "ciB_high": 0.9589645002145001
+    }
+  ],
+  "E6": {
+    "squat": {
+      "raw": {
+        "identity_acc": 0.5349,
+        "chance": 0.125,
+        "between_subject_var_share": 0.4172
+      },
+      "SchemeA": {
+        "identity_acc": 0.3721,
+        "chance": 0.125,
+        "between_subject_var_share": 0.3931
+      },
+      "SchemeB": {
+        "identity_acc": 0.3721,
+        "chance": 0.125,
+        "between_subject_var_share": 0.3235
+      },
+      "peak_between_share": 0.5342
+    },
+    "lunge": {
+      "raw": {
+        "identity_acc": 0.6364,
+        "chance": 0.2,
+        "between_subject_var_share": 0.2237
+      },
+      "SchemeA": {
+        "identity_acc": 0.5152,
+        "chance": 0.2,
+        "between_subject_var_share": 0.354
+      },
+      "SchemeB": {
+        "identity_acc": 0.3636,
+        "chance": 0.2,
+        "between_subject_var_share": 0.1424
+      },
+      "peak_between_share": 0.3015
+    }
+  },
+  "E7": {
+    "fisher_OR": 0.6448412698412699,
+    "fisher_p": 0.3626269898149932,
+    "d_full": 1.6904126995997473,
+    "d_noPM042": 1.7826351907375748,
+    "los_range": [
+      1.4427,
+      2.6269
+    ]
+  }
+}

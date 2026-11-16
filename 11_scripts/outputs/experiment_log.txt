@@ -1,0 +1,131 @@
+==============================================================================
+E1. VERIFICATION OF THE UNCERTAINTY CHAIN (Reviewer Comments 2 & 6)
+==============================================================================
+              biomarker    bias  loa_lower  loa_upper    width  sd_total  var_total  var_paper
+     #1 contact_flexion -6.6914   -26.7742    13.3913  40.1655   10.2463   104.9867   104.9867
+#2 peak_landing_flexion 19.7171     7.7285    31.7057  23.9772    6.1166    37.4132    37.4132
+         #3 landing_rom 26.4086     2.3373    50.4798  48.1425   12.2812   150.8291   150.8291
+        #6 loading_rate 13.2973  -115.9179   142.5125 258.4304   65.9261  4346.2536  4346.2534
+
+Static-turnaround same-instant errors (n=96):
+  bias = +10.5200 deg, SD = 8.1926 deg, 95% LoA [-5.54, 26.58]
+  peak-to-peak agreement SD (biomarker #2) = 6.1166 deg
+  Extra same-instant variance = 29.71 deg^2 (SD 5.45 deg)
+  -> sub-frame timing component even at the turnaround (dynamic, NOT transferred)
+
+Table 5 verification (NF = 1.96 x sigma_proj):
+              biomarker  var_total  share_static  var_proj  sigma_proj  NF_1.96sigma   raw_w  norm_w_pct
+     #1 contact_flexion   104.9867        0.9000   94.4880      9.7205       19.0522 0.01058       22.63
+#2 peak_landing_flexion    37.4132        1.0000   37.4132      6.1166       11.9886 0.02673       57.15
+         #3 landing_rom   150.8291        0.9262  139.7047     11.8197       23.1666 0.00716       15.30
+        #6 loading_rate  4346.2536        0.1000  434.6254     20.8477       40.8614 0.00230        4.92
+
+==============================================================================
+E2. TEMPORAL DOWNSAMPLING SENSITIVITY 30->15 Hz (Comment 1)
+==============================================================================
+Loaded trajectories: squats n=98, lunges n=88
+
+squat: |30Hz - 15Hz| change (n=98 reps)
+  d_peak     : median 0.00, p95 0.22, max 0.57
+  d_rom      : median 0.09, p95 0.83, max 2.20
+  d_peakvel  : median 8.51, p95 22.34, max 34.90
+  d_meanvel  : median 0.00, p95 2.83, max 4.71
+  max |ang. vel| within +/-1 frame of turnaround: median 8.08 deg/s, p95 21.12 deg/s
+
+lunge: |30Hz - 15Hz| change (n=61 reps)
+  d_peak     : median 0.03, p95 0.33, max 1.20
+  d_rom      : median 0.11, p95 0.83, max 6.21
+  d_peakvel  : median 5.81, p95 30.46, max 39.33
+  d_meanvel  : median 0.35, p95 2.32, max 10.60
+  max |ang. vel| within +/-1 frame of turnaround: median 7.44 deg/s, p95 36.04 deg/s
+
+==============================================================================
+E3. UNCERTAINTY PROPAGATION + THRESHOLD SENSITIVITY (Comment 2)
+==============================================================================
+{"exercise": "squat", "metric": "peak_flexion_deg", "n_null": 54, "emp_SD_D": 13.073, "emp_q95_D": 29.622, "sigma_meas": 6.117, "var_within_video": 54.904, "var_bio": 17.491, "NF_operating": 11.9885, "NF_prop_meas_only": 14.683, "NF_prop_with_bio": 17.787, "FPR_op": 0.3704, "sens_op": 0.8077, "bal_op": 0.589, "FPR_p1": 0.2593, "sens_p1": 0.6538, "bal_p1": 0.4566, "FPR_p2": 0.2407, "sens_p2": 0.6154, "bal_p2": 0.4281, "FPR_emp": 0.0556, "sens_emp": 0.3462, "bal_emp": 0.2009}
+{"exercise": "squat", "metric": "rom_deg", "n_null": 54, "emp_SD_D": 20.485, "emp_q95_D": 50.759, "sigma_meas": 12.281, "var_within_video": 68.306, "var_bio": 0.0, "NF_operating": 23.1666, "NF_prop_meas_only": 29.481, "NF_prop_with_bio": 29.481, "FPR_op": 0.1852, "sens_op": 0.5769, "bal_op": 0.3811, "FPR_p1": 0.1852, "sens_p1": 0.5, "bal_p1": 0.3426, "FPR_p2": 0.1852, "sens_p2": 0.5, "bal_p2": 0.3426, "FPR_emp": 0.0556, "sens_emp": 0.1154, "bal_emp": 0.0855}
+{"exercise": "squat", "metric": "mean_descent_velocity_deg_per_frame", "n_null": 54, "emp_SD_D": 21.785, "emp_q95_D": 61.592, "sigma_meas": 20.848, "var_within_video": 105.778, "var_bio": 0.0, "NF_operating": 40.8615, "NF_prop_meas_only": 50.045, "NF_prop_with_bio": 50.045, "FPR_op": 0.1111, "sens_op": 0.2308, "bal_op": 0.1709, "FPR_p1": 0.1111, "sens_p1": 0.1154, "bal_p1": 0.1132, "FPR_p2": 0.1111, "sens_p2": 0.1154, "bal_p2": 0.1132, "FPR_emp": 0.0556, "sens_emp": 0.0, "bal_emp": 0.0278}
+{"exercise": "lunge", "metric": "peak_flexion_deg", "n_null": 15, "emp_SD_D": 7.617, "emp_q95_D": 12.632, "sigma_meas": 6.117, "var_within_video": 20.338, "var_bio": 0.0, "NF_operating": 11.9885, "NF_prop_meas_only": 14.683, "NF_prop_with_bio": 14.683, "FPR_op": 0.1333, "sens_op": 0.9565, "bal_op": 0.5449, "FPR_p1": 0.0, "sens_p1": 0.9565, "bal_p1": 0.4783, "FPR_p2": 0.0, "sens_p2": 0.9565, "bal_p2": 0.4783, "FPR_emp": 0.0667, "sens_emp": 0.9565, "bal_emp": 0.5116}
+{"exercise": "lunge", "metric": "rom_deg", "n_null": 15, "emp_SD_D": 16.381, "emp_q95_D": 26.579, "sigma_meas": 12.281, "var_within_video": 81.875, "var_bio": 0.0, "NF_operating": 23.1666, "NF_prop_meas_only": 29.481, "NF_prop_with_bio": 29.481, "FPR_op": 0.0667, "sens_op": 0.8261, "bal_op": 0.4464, "FPR_p1": 0.0667, "sens_p1": 0.7391, "bal_p1": 0.4029, "FPR_p2": 0.0667, "sens_p2": 0.7391, "bal_p2": 0.4029, "FPR_emp": 0.0667, "sens_emp": 0.8261, "bal_emp": 0.4464}
+{"exercise": "lunge", "metric": "mean_descent_velocity_deg_per_frame", "n_null": 15, "emp_SD_D": 8.788, "emp_q95_D": 10.498, "sigma_meas": 20.848, "var_within_video": 40.678, "var_bio": 0.0, "NF_operating": 40.8615, "NF_prop_meas_only": 50.045, "NF_prop_with_bio": 50.045, "FPR_op": 0.0, "sens_op": 0.3913, "bal_op": 0.1957, "FPR_p1": 0.0, "sens_p1": 0.2174, "bal_p1": 0.1087, "FPR_p2": 0.0, "sens_p2": 0.2174, "bal_p2": 0.1087, "FPR_emp": 0.0667, "sens_emp": 0.6957, "bal_emp": 0.3812}
+
+==============================================================================
+E4. SUPERVISED vs LABEL-FREE BASELINE (Comment 3)
+==============================================================================
+                                          rule  n  FPR_correct  flag_rate_incorrect  balanced  n_correct  n_incorrect exercise
+                   supervised|peak_flexion_deg 80       0.3704               0.8077    0.5890         54           26    squat
+                            supervised|rom_deg 80       0.1852               0.5769    0.3811         54           26    squat
+supervised|mean_descent_velocity_deg_per_frame 80       0.1111               0.2308    0.1709         54           26    squat
+                         supervised|OR-3-rules 80       0.3704               0.8462    0.6083         54           26    squat
+                   label-free|peak_flexion_deg 80       0.3704               0.8077    0.5890         54           26    squat
+                            label-free|rom_deg 80       0.1852               0.5769    0.3811         54           26    squat
+label-free|mean_descent_velocity_deg_per_frame 80       0.1111               0.2308    0.1709         54           26    squat
+                         label-free|OR-3-rules 80       0.3704               0.8462    0.6083         54           26    squat
+                   supervised|peak_flexion_deg 38       0.1333               0.9565    0.5449         15           23    lunge
+                            supervised|rom_deg 38       0.0667               0.8261    0.4464         15           23    lunge
+supervised|mean_descent_velocity_deg_per_frame 38       0.0000               0.3913    0.1957         15           23    lunge
+                         supervised|OR-3-rules 38       0.1333               0.9565    0.5449         15           23    lunge
+                   label-free|peak_flexion_deg 48       0.0000               0.9375    0.4688         16           32    lunge
+                            label-free|rom_deg 48       0.0000               0.7812    0.3906         16           32    lunge
+label-free|mean_descent_velocity_deg_per_frame 48       0.0000               0.2500    0.1250         16           32    lunge
+                         label-free|OR-3-rules 48       0.0000               0.9688    0.4844         16           32    lunge
+
+==============================================================================
+E5. CONFUSION MATRICES, PER-PARTICIPANT RESULTS, BOOTSTRAP VARIANTS (Comment 5)
+==============================================================================
+
+squat: pooled LOSO peak-flexion baseline: {'exercise': 'squat', 'n': 98, 'TP': 59, 'FP': 5, 'TN': 21, 'FN': 13, 'sensitivity': 0.8194, 'specificity': 0.8077, 'balanced_accuracy': 0.8136}
+ subject_id  n  TP  FP  TN  FN  bal_acc
+          1 17  14   1   0   2   0.4375
+          2 10   5   0   0   5      NaN
+          3 10   4   0   5   1   0.9000
+          4 10   6   0   0   4      NaN
+          5 10   5   0   5   0   1.0000
+          6 10   5   0   5   0   1.0000
+          7 10   5   3   2   0   0.7000
+          8 10   5   1   4   0   0.9000
+          9 11  10   0   0   1      NaN
+  Bootstrap A (OOF-prediction resampling, 5000): mean 0.8121, 95% CI [0.6680, 0.9175], skipped 0
+  Bootstrap B (FULL-REFIT LOSO, 2000): mean 0.8049, 95% CI [0.6590, 0.9148], skipped 10
+
+lunge: pooled LOSO peak-flexion baseline: {'exercise': 'lunge', 'n': 61, 'TP': 22, 'FP': 9, 'TN': 27, 'FN': 3, 'sensitivity': 0.88, 'specificity': 0.75, 'balanced_accuracy': 0.815}
+ subject_id  n  TP  FP  TN  FN  bal_acc
+          2  9   2   0   5   2   0.7500
+          3 10   0   6   4   0      NaN
+          4  9   5   0   4   0   1.0000
+          5  1   0   1   0   0      NaN
+          6 10   4   0   5   1   0.9000
+          7 10   5   1   4   0   0.9000
+          9 12   6   1   5   0   0.9167
+  Bootstrap A (OOF-prediction resampling, 5000): mean 0.8193, 95% CI [0.6872, 0.9200], skipped 0
+  Bootstrap B (FULL-REFIT LOSO, 2000): mean 0.8050, 95% CI [0.6005, 0.9590], skipped 26
+
+==============================================================================
+E6. SUBJECT-IDENTITY ENCODING DIAGNOSTIC (Comment 5c: LSTM explanation)
+==============================================================================
+  squat raw: identity acc 0.535 (chance 0.125), between-subject var share 0.417
+  squat SchemeA: identity acc 0.372 (chance 0.125), between-subject var share 0.393
+  squat SchemeB: identity acc 0.372 (chance 0.125), between-subject var share 0.324
+  squat peak-flexion between-subject variance share: 0.534
+  lunge raw: identity acc 0.636 (chance 0.200), between-subject var share 0.224
+  lunge SchemeA: identity acc 0.515 (chance 0.200), between-subject var share 0.354
+  lunge SchemeB: identity acc 0.364 (chance 0.200), between-subject var share 0.142
+  lunge peak-flexion between-subject variance share: 0.301
+
+==============================================================================
+E7. EXCLUSION IMPACT & EFFECT-SIZE STABILITY (Comment 4)
+==============================================================================
+valid 61 (correct 25, incorrect 36); rejected 27 (correct 14, incorrect 13)
+Fisher exact OR=0.6448, p=0.3626
+peak-flexion d (61 valid) = 1.6904; without PM_042 single rep = 1.7826
+ excluded_subject      d
+                2 1.6512
+                3 2.6269
+                4 1.6088
+                5 1.7826
+                6 1.5719
+                7 1.5470
+                9 1.4427
+LOSO-d range: [1.443, 2.627]
+
+All experiments complete. Outputs in /home/z/my-project/scripts/outputs

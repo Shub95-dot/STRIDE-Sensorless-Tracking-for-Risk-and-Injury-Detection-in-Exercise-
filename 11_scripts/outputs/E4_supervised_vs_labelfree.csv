@@ -1,0 +1,17 @@
+rule,n,FPR_correct,flag_rate_incorrect,balanced,n_correct,n_incorrect,exercise
+supervised|peak_flexion_deg,80,0.3704,0.8077,0.589,54,26,squat
+supervised|rom_deg,80,0.1852,0.5769,0.3811,54,26,squat
+supervised|mean_descent_velocity_deg_per_frame,80,0.1111,0.2308,0.1709,54,26,squat
+supervised|OR-3-rules,80,0.3704,0.8462,0.6083,54,26,squat
+label-free|peak_flexion_deg,80,0.3704,0.8077,0.589,54,26,squat
+label-free|rom_deg,80,0.1852,0.5769,0.3811,54,26,squat
+label-free|mean_descent_velocity_deg_per_frame,80,0.1111,0.2308,0.1709,54,26,squat
+label-free|OR-3-rules,80,0.3704,0.8462,0.6083,54,26,squat
+supervised|peak_flexion_deg,38,0.1333,0.9565,0.5449,15,23,lunge
+supervised|rom_deg,38,0.0667,0.8261,0.4464,15,23,lunge
+supervised|mean_descent_velocity_deg_per_frame,38,0.0,0.3913,0.1957,15,23,lunge
+supervised|OR-3-rules,38,0.1333,0.9565,0.5449,15,23,lunge
+label-free|peak_flexion_deg,48,0.0,0.9375,0.4688,16,32,lunge
+label-free|rom_deg,48,0.0,0.7812,0.3906,16,32,lunge
+label-free|mean_descent_velocity_deg_per_frame,48,0.0,0.25,0.125,16,32,lunge
+label-free|OR-3-rules,48,0.0,0.9688,0.4844,16,32,lunge
